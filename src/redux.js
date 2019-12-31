@@ -3,7 +3,7 @@ import uuid from 'uuid/v4';
 
 const images = {};
 for (let i = 0; i < 30; i++) {
-    const pictureNr = Math.floor(Math.random() * 100);
+    const pictureNr = Math.floor(Math.random() * 80);
     const id = uuid();
 	images[id] = {
         id,
