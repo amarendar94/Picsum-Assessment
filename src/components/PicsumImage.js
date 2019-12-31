@@ -10,13 +10,13 @@ const PicsumImage = () => {
 
   let imageUrl = selectedImage ? images[selectedImage].download_url : "";
 
-  let handleChange = e => {
+  let addImage = e => {
     let id = uuid();
     dispatch({
       type: "ADD_IMAGE",
       payload: {
         id,
-        url: URL.createObjectURL(e.target.files[0])
+        download_url: URL.createObjectURL(e.target.files[0])
       }
     });
     dispatch({ type: "SELECTED_IMAGE_CHANGE", payload: id });
@@ -51,7 +51,7 @@ const PicsumImage = () => {
                 <CustomInput
                   type="file"
                   id="exampleCustomFileBrowser"
-                  onChange={handleChange}
+                  onChange={addImage}
                   name="customFile"
                   label="Upload Images!"
                   size="sm"
