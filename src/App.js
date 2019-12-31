@@ -1,7 +1,7 @@
 import React from "react";
 import "./App.css";
 import { Provider } from "react-redux";
-import { store } from "./redux";
+import { store } from "./Redux/redux";
 import PicsumGrid from "./components/PicsumGrid";
 import PicsumImage from "./components/PicsumImage";
 import { Navbar, NavbarBrand } from "reactstrap";

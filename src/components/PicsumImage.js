@@ -8,7 +8,7 @@ const PicsumImage = () => {
   const selectedImage = useSelector(state => state.selectedImage);
   const dispatch = useDispatch();
 
-  let imageUrl = selectedImage ? images[selectedImage].url : "";
+  let imageUrl = selectedImage ? images[selectedImage].download_url : "";
 
   let handleChange = e => {
     let id = uuid();
@@ -30,7 +30,7 @@ const PicsumImage = () => {
             width="820px"
             height="460px"
             src={imageUrl}
-            alt="Card image cap"
+            alt={imageUrl}
           />
           <CardBody>
             <div className="row">
