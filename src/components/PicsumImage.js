@@ -1,6 +1,6 @@
 import React from "react";
 import { useSelector, useDispatch } from "react-redux";
-import { Card, CardImg, CardBody, Button, CustomInput } from "reactstrap";
+import { Card, CardBody, Button, CustomInput } from "reactstrap";
 import uuid from "uuid/v4";
 
 const PicsumImage = () => {
@@ -23,10 +23,15 @@ const PicsumImage = () => {
   };
 
   return (
-    <div >
+    <div>
       {imageUrl ? (
         <Card>
-          <CardImg top width="100%" src={imageUrl} alt="Card image cap" />
+          <img
+            width="820px"
+            height="460px"
+            src={imageUrl}
+            alt="Card image cap"
+          />
           <CardBody>
             <div className="row">
               <div className="col-3">
@@ -44,7 +49,6 @@ const PicsumImage = () => {
               </div>
               <div className="col-9">
                 <CustomInput
-                  width="100px"
                   type="file"
                   id="exampleCustomFileBrowser"
                   onChange={handleChange}
@@ -57,7 +61,7 @@ const PicsumImage = () => {
           </CardBody>
         </Card>
       ) : (
-        "Please Select Image"
+        "Please Select an Image"
       )}
     </div>
   );

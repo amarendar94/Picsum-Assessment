@@ -1,8 +1,8 @@
-.container{
+.container {
   margin-top: 60px;
 }
 
-.gallery{
+.gallery {
   height: 90vh;
   overflow: auto;
 }
@@ -12,13 +12,13 @@
 }
 
 ::-webkit-scrollbar-track {
-  background: #f1f1f1; 
+  background: #f1f1f1;
 }
- 
+
 ::-webkit-scrollbar-thumb {
-  background: #888; 
+  background: #888;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: #555; 
+  background: #555;
 }
